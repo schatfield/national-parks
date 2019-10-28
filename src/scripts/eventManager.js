@@ -23,8 +23,8 @@ const handleParksSearch = event => {
 
     searchParks(inputField.value)
         .then(parksApiResponse => {
-            console.log(parksApiResponse.parks)
-            displayParkHtml(parksApiResponse.parks)
+            console.log(parksApiResponse)
+            displayParkHtml(parksApiResponse)
             inputField.value = ""
 
         })

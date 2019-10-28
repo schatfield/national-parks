@@ -7,9 +7,10 @@
 
 // variable buildParkHtml is holding a template literal of some HTML code
 // "park" is a parameter the developer created
+// <article class=${park.visited ? "visited" : "not-visited"}>
 
 const buildParkHtml = park => `
-<article>
+ <article class=${park.visited ? "visited" : "not-visited"}>
   <h4>${park.name}</h4>
   <p>
     ${park.state}
@@ -17,6 +18,26 @@ const buildParkHtml = park => `
 </article>
 `
 console.log("Park result HTML", buildParkHtml)
+
+
+
+// const buildParkHtml = park => {
+
+//     const parkClass = ""
+
+//     if (park.visited) {
+
+//         parkClass = "visited"
+
+//     } else {
+
+//         parkClass = "not-visited"
+
+//     }
+
+// }
+
+
 
 
 
@@ -35,7 +56,7 @@ console.log("Park result HTML", buildParkHtml)
 
 const displayParkHtml = nationalPark => {
     let parkResultHtml = ""
-    // console.log(nationalPark)
+    console.log("the data from the API", nationalPark)
     nationalPark.forEach(park => {
         let parkHtml = buildParkHtml(park)
         parkResultHtml = parkHtml
