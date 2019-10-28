@@ -9,19 +9,22 @@ const handleParksSearch = event => {
 
     const inputField = document.querySelector("input")
 
-    console.log("USER INPUT GOES HERE", inputField)
+    console.log("USER INPUT GOES HERE", inputField.value)
 
+    inputField.value = inputField.value.split(' ').join("+")
 
-    // the function searchRecipes is being called below. it was defined on the apiManager.js document.
+    // var replaced = str.split(' ').join('+');
+
+    // the function searchParks is being called below. it was defined on the apiManager.js document.
     // the parameter inputField is the declared variable grabbing a reference to the DOM above
     // .value is a property available to use to bring back the value of what it is attached to
-    
+
 
 
     searchParks(inputField.value)
         .then(parksApiResponse => {
             console.log(parksApiResponse.parks)
-            displayRecipeHtml(response.parks)
+            displayParkHtml(parksApiResponse.parks)
             inputField.value = ""
 
         })
