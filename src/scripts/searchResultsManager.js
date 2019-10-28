@@ -17,7 +17,7 @@ const buildParkHtml = park => `
   </p>
 </article>
 `
-console.log("Park result HTML", buildParkHtml)
+
 
 
 
@@ -26,17 +26,24 @@ console.log("Park result HTML", buildParkHtml)
 //     const parkClass = ""
 
 //     if (park.visited) {
-
-//         parkClass = "visited"
-
+//         // ***this is a newly delcared variable to store the class of "visited"
+//         parkClass = "visited"    
 //     } else {
-
+//         // ***this is a newly delcared variable to store the class of "visited"
 //         parkClass = "not-visited"
-
 //     }
 
-// }
+//     return `
+//         <article class=${parkClass}>
+//         <h4>${park.name}</h4>
+//         <p>
+//         ${park.state}
+//         </p>
+//     </article>
+//    `
 
+// }
+// ***how do you know that return in the function above? Ask yourself- what si the point of this function and what are you trying to return?
 
 
 
